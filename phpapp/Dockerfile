@@ -8,6 +8,10 @@ RUN docker-php-ext-install -j$(nproc) mysqli pdo_mysql gd zip pcntl
 #apache modules
 RUN a2enmod headers expires rewrite
 #working directory
-WORKDIR /var/www/html
+WORKDIR /var/www/html/
+#set environment variables
+ENV MYSQLUSER=root
+ENV MYSQLPASS=root
+
 COPY . .
-EXPOSE 85
+EXPOSE 80
