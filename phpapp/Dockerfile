@@ -12,6 +12,6 @@ WORKDIR /var/www/html/
 #set environment variables
 ENV MYSQLUSER=root
 ENV MYSQLPASS=root
-
+#TO DO :IMPLEMENT SECRETS 
 COPY . .
 EXPOSE 80
