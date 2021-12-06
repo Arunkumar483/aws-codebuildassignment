@@ -13,10 +13,10 @@ phases:
     - docker build -t phpimage:php --no-cache .
     - cd ..
     - aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/s5o7d0z2
-    - docker tag mysqldockimage:sql public.ecr.aws/s5o7d0z2/ak-phpmysql:latest:mysql
+    - docker tag mysqldockimage:sql public.ecr.aws/s5o7d0z2/ak-phpmysql:mysql
     - docker tag phpimage:php public.ecr.aws/s5o7d0z2/ak-phpmysql:phpimage
     - docker push public.ecr.aws/s5o7d0z2/ak-phpmysql:phpimage
-    - docker push public.ecr.aws/s5o7d0z2/ak-phpmysql:mysqlimage
+    - docker push public.ecr.aws/s5o7d0z2/ak-phpmysql:mysql
   post_build:
     commands:
     - echo Build completed on `date`
