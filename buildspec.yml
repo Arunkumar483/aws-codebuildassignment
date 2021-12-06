@@ -6,14 +6,17 @@ phases:
   build:
     commands:
     - echo Build started on `date`
-    - docker build -t mysqldockimage ./mysqlcon
-    - docker build -t phpimage --no-cache ./phpapp
+    - cd mysqlcon
+    - docker build -t mysqldockimage:sql .
+    - cd ..
+    - cd phpapp 
+    - docker build -t phpimage:php --no-cache .
+    - cd ..
     - aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/s5o7d0z2
-    
-    - docker tag mysqldockimage public.ecr.aws/s5o7d0z2/ak-phpmysql:latest/mysql
-    - docker tag phpimage public.ecr.aws/s5o7d0z2/ak-phpmysql:latest/phpimage
-    - docker push public.ecr.aws/s5o7d0z2/ak-phpmysql:latest/phpimage
-    - docker push public.ecr.aws/s5o7d0z2/ak-phpmysql:latest/mysqlimage
+    - docker tag mysqldockimage:sql public.ecr.aws/s5o7d0z2/ak-phpmysql:latest:mysql
+    - docker tag phpimage:php public.ecr.aws/s5o7d0z2/ak-phpmysql:latest:phpimage
+    - docker push public.ecr.aws/s5o7d0z2/ak-phpmysql:latest:phpimage
+    - docker push public.ecr.aws/s5o7d0z2/ak-phpmysql:latest:mysqlimage
   post_build:
     commands:
     - echo Build completed on `date`
