@@ -22,7 +22,7 @@ phases:
     commands:
     - echo Build completed on `date`
     - printf '[{"name":"phpcontainer","imageUri":"public.ecr.aws/s5o7d0z2/ak-phpmysql:phpimage"},\n{"name":"mysqlcontainer","imageUri":"public.ecr.aws/s5o7d0z2/ak-phpmysql:mysql"}]' > imagedefinitions.json
-  artifacts:
-    files:
+artifacts:
+   files:
     - 'imagedefinitions.json'
    
