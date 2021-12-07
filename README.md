@@ -42,12 +42,19 @@ navigate to localhost:81 our phpmysql will be live on the server
 building our code build and codepipeline for the project
 
 **ECR REPOSITORY COFIGURATION
+
 first ecr create repository 
+
 name it and make global 
+
 use linux x86 64 
+
 then go to our github repository
+
 clone it and edit our repository
+
 add file and name it as buildspec.yml
+
 refer buildspec.xml in repo
 
 ![image](https://user-images.githubusercontent.com/52123143/144964610-686eadb2-2782-41d6-861c-21a2de5cafb4.png)
