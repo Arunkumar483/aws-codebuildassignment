@@ -149,7 +149,7 @@ create pipeline.
 
 go to build details
 
-
+NOW REFER  OUR ECR REPOSITORY AND VERIFY IF OUR PHP AND MYSQL IMAGES ARE PRESENT.
 
 
 
