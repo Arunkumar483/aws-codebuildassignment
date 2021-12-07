@@ -41,19 +41,39 @@ navigate to localhost:81 our phpmysql will be live on the server
 ---------------------------------------------------------------------------------------
 building our code build and codepipeline for the project
 
-**ECR REPOSITORY COFIGURATION
+**ECR REPOSITORY CONFIGURATION
 
 first ecr create repository 
 
 name it and make global 
 
 use linux x86 64 
+and create repository
+
+**Buildspec configuration
 
 then go to our github repository
 
 clone it and edit our repository
 
 add file and name it as buildspec.yml
+
+Note: In buildspec.yml
+
+in build command the tag name must be same as the tag name in tagging ecr image 
+![image](https://user-images.githubusercontent.com/52123143/144967487-1619f758-353e-426e-af01-4bf53549b753.png)
+
+![image](https://user-images.githubusercontent.com/52123143/144967592-44465518-821b-4b67-8dd5-a00aa813a755.png)
+
+Identically,the tag command's last parameter must be the same as the push command's 
+parameter
+
+![image](https://user-images.githubusercontent.com/52123143/144967673-4271ea0f-1747-418f-9a33-3b4065cb6698.png)
+
+![image](https://user-images.githubusercontent.com/52123143/144967707-e7fea7b7-cc1b-4f89-98d9-805deb018a07.png)
+
+
+
 
 refer buildspec.xml in repo
 
