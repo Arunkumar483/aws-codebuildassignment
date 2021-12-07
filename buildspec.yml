@@ -21,3 +21,7 @@ phases:
   post_build:
     commands:
     - echo Build completed on `date`
+    - printf '[{"name":"%s","imageUri":"%s"},\n{"name":"%s","imageUri":"%s"}]' > imagedefinitions.json
+  artifacts:
+    files:
+     - imaggdefinitions.json
