@@ -1,6 +1,6 @@
 # dockerphpmysqlapplication
 
-create network for setting communication between php and mysql containers
+create network for setting communication between php and mysql containers.
 
 
 sudo docker network create #networkname#
