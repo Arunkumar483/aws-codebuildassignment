@@ -96,6 +96,7 @@ enable this flag for priviledge
 
 create new service role
 
+In additional Configuration
 env variables la add dockerpass and dockeruser specify our credentials
 
 buildspec leave it as such
