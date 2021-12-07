@@ -21,7 +21,7 @@ phases:
   post_build:
     commands:
     - echo Build completed on `date`
-    - printf '[{"name":"%s","imageUri":"%s"},\n{"name":"%s","imageUri":"%s"}]' > imagedefinitions.json
+    - printf '[{"name":"phpcontainer","imageUri":"public.ecr.aws/s5o7d0z2/ak-phpmysql:phpimage"},\n{"name":"mysqlcontainer","imageUri":"public.ecr.aws/s5o7d0z2/ak-phpmysql:mysql"}]' > imagedefinitions.json
   artifacts:
     files:
-     - imaggdefinitions.json
+     - imagedefinitions.json
